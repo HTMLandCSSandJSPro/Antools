@@ -33,9 +33,7 @@ a{
 }
 
 .header{
-    width: 1214.74px;
     height: 48px;
-    margin: 0 auto;
     margin-top: 16px;
 }
 
@@ -50,7 +48,7 @@ a{
     line-height: 1.5;
     letter-spacing: 0em;
     color: white;
-    margin-right: 257px;
+    margin-right: auto;
 }
 
 .header__logo > img{
@@ -126,7 +124,6 @@ a{
 }
 
 .hero__search{
-    display: inline-block;
     width: 440px; 
     height: 64px; 
     border-radius: 15px;
@@ -138,13 +135,15 @@ a{
     letter-spacing: 0em;
     color: #FFFFFF61;
     padding-left: 55px;
+    position: relative;
 }
 
 .hero__search__icon{
     width: 24px; 
     height: 24px;
     position: absolute;
-    margin-left: 18px;
+    top: 0;
+    right: 0;
 }
 
 .hero__search__button{
@@ -160,11 +159,6 @@ a{
     margin-left: 356px;
 }
 
-form {
-    display: flex;
-    align-items: center;
-    margin-top: 60px;
-}
 
 .hero__social__media__list{
     display: flex;
@@ -182,8 +176,8 @@ form {
 .tools__list{
     width: 100%;
     display: flex;
-    row-gap: 24px;
-    column-gap: 100px;
+    row-gap: 100px;
+    column-gap: 24px;
     flex-wrap: wrap;
     margin-top: 110px;
 }
@@ -287,4 +281,37 @@ form {
 
 .tool__item__logo{
     display: inline-block;
+}
+
+.tools__title{
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFFE5;
+}
+
+.tools__description {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF8C;
+    margin-top: 25px;
+    max-width: 427px;
+    margin: 0 auto;
+}
+
+/* BRANDS */
+
+.trusted__brands__title{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0em;
+    display: inline-block;
+    color: #FFFFFFCC;
 }
