@@ -1,5 +1,5 @@
 :hover{
-    transition: 0.5s;
+    transition: all 1s ;
 }
 
 input:focus{

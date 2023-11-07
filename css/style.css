@@ -34,6 +34,7 @@ address{
     width: 1224px;
     margin: 0 auto;
     padding: 0 15px;
+    position: relative;
 }
 
 .header{
@@ -69,7 +70,31 @@ address{
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0em;
-    color: #FFFFFF8C;
+    color: rgba(255, 255, 255, 0.55);
+    transition: all 0.5s;
+    position: relative;
+}
+
+.nav__list__link::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    height: 1px;
+    width: 0%;
+    transition: all 0.5s;
+    opacity: 0;
+    z-index: 1;
+}
+
+.nav__list__link:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.nav__list__link:hover::after {
+    width: 100%;
+    opacity: 1;
 }
 
 .account__list{
@@ -85,7 +110,7 @@ address{
     font-weight: 600;
     line-height: 1.5;
     letter-spacing: 0em;
-    color: #FFFFFFC7;
+    color: rgba(255, 255, 255, 0.78);
 }
 
 .account__list__sign__up{
@@ -111,6 +136,13 @@ address{
     width: 600px;
     color: #FFFFFFE5;
     
+}
+
+.hero__container__wrap{
+    background-image: url("../img/hero-img.svg");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
 }
 
 .hero__title>span {
@@ -388,7 +420,10 @@ address{
 }
 /* TEAM */
 .team__member__box{
-    margin: 0 auto;
+    display: flex;
+    column-gap: 57px;
+    justify-content: center;
+    align-items: center;
 }
 
 .team__member__box__img{
@@ -405,7 +440,7 @@ address{
     letter-spacing: 0.015em;
     color: #FFFFFFC7;
     width: 450px;
-    display: inline-block
+    margin-top: 128px;
 }
 
 .team__member__box__description::before{
@@ -417,6 +452,19 @@ address{
     position: absolute;
     top: -50px;
     left: -50px;
+}
+.left__button{
+    position: absolute;
+    left: 0;
+    top: calc(50% - 40px);
+    padding: 38px 34px;
+}
+
+.right__button {
+    position: absolute;
+    right: 0;
+    top: calc(50% - 40px);
+    padding: 38px 34px;
 }
 
 .team__navigation__buttons{
@@ -642,11 +690,15 @@ address{
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0em;
-    color: #FFFFFFE5;
+    color: hsla(0, 0%, 100%, 0.898);
 }
 
 .footer__info__wrap__list{
     margin-top: 20px;
+}
+
+.footer__info__wrap__list__item{
+    margin-bottom: 10px;
 }
 
 .footer__info__wrap__item__link{
@@ -654,6 +706,28 @@ address{
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0em;
-    color: #FFFFFF8C;
-    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.55);
+    position: relative;
+}
+
+.footer__info__wrap__item__link::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    height: 1px;
+    width: 0%;
+    transition: all 0.5s;
+    opacity: 0;
+    z-index: 1;
+}
+
+.footer__info__wrap__item__link:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer__info__wrap__item__link:hover::after {
+    width: 100%;
+    opacity: 1;
 }
