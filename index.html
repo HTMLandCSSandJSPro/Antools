@@ -18,7 +18,14 @@
                     <nav class="nav">
                         <ul class="nav__list">
                             <li class="nav__list__item"><a href="" class="nav__list__link">Home</a></li>
-                            <li class="nav__list__item"><a href="" class="nav__list__link">Categories</a></li>
+                            <li class="nav__list__item nav__list__item__categories">
+                                <a href="" class="nav__list__link nav__list__link_categories">Categories</a>
+                                <ul class="header__categories">
+                                    <li class="header__categories__item"><a href="" class="header__categories__link">Categorie 1</a></li>
+                                    <li class="header__categories__item"><a href="" class="header__categories__link">Categorie 2</a></li>
+                                    <li class="header__categories__item"><a href="" class="header__categories__link">Categorie 3</a></li>
+                                </ul>
+                            </li>
                             <li class="nav__list__item"><a href="" class="nav__list__link">My Collections</a></li>
                             <li class="nav__list__item"><a href="" class="nav__list__link">Blog</a></li>
                         </ul>
@@ -33,13 +40,11 @@
         <main>
             <section class="hero">
                 <div class="container">
-                    <div class="hero__container__wrap">
                         <h1 class="hero__title">Awesome tools for Designer & Developer<span>.</span></h1>
                         <p class="hero__description">Antool is a web collection of info on paid or free Design and Development tools</p>
                         <div class="hero__search__wrap">
-                            <img class="hero__search__icon" src="img/search.svg" alt="search">
-                            <button class="hero__search__button" type="submit">Search</button>
                             <input type="text" placeholder="find more than 430+ tools..." class="hero__search">
+                            <button class="hero__search__button" type="submit">Search</button>
                         </div>
                         <ul class="hero__social__media__list">
                             <li class="hero__social__media__list__item"><img src="img/facebook-icon.svg" alt="Facebook" class="hero__social__media__list__img"></li>
@@ -47,7 +52,6 @@
                             <li class="hero__social__media__list__item"><img src="img/twitter-icon.svg" alt="Twitter" class="hero__social__media__list__img"></li>
                         </ul>
                     </div>
-                </div>
             </section>
             <section class="tools">
                 <div class="container">
@@ -238,12 +242,14 @@
             </section>
             <section class="team">
                 <div class="container">
-                    <img src="./img/left-button.svg" alt="left-button" class="left__button">
-                    <div class="team__member__box">
-                        <img src="./img/team-member-ronald.png" alt="Ronald Richards" class="team__member__box__img">
-                        <p class="team__member__box__description">Incididunt cillum do sint sint enim ullamco id deserunt mollit qui reprehenderit do. Velit ex tempor cillum ad sint occaecat. Do nulla velit labore occaecat do deserunt Lorem magna officia incididunt consectetur amet. Sunt consectetur veniam minim ex commodo sint non. Occaecat aute officia excepteur non laboris id qui ad.</p>
+                    <div class="team__wrap">
+                        <img src="./img/left-button.svg" alt="left-button" class="left__button">
+                        <div class="team__member__box">
+                            <img src="./img/team-member-ronald.png" alt="Ronald Richards" class="team__member__box__img">
+                            <p class="team__member__box__description">Incididunt cillum do sint sint enim ullamco id deserunt mollit qui reprehenderit do. Velit ex tempor cillum ad sint occaecat. Do nulla velit labore occaecat do deserunt Lorem magna officia incididunt consectetur amet. Sunt consectetur veniam minim ex commodo sint non. Occaecat aute officia excepteur non laboris id qui ad.</p>
+                        </div>
+                        <img src="./img/right-button.svg" alt="right-button" class="right__button">
                     </div>
-                    <img src="./img/right-button.svg" alt="right-button" class="right__button">
                     <div class="team__navigation__buttons">
                         <span class="team__navigation__button"></span>
                         <span class="team__navigation__button active"></span>
@@ -257,8 +263,8 @@
                         <h3 class="join__us__title">Become a contributor</h3>
                         <p class="join__us__description">Join us and get tips & tricks to become a great Designer and Developer</p>
                         <div class="join__input__wrap">
-                            <button class="join__submit__button" type="submit">Join Us</button>
                             <input type="email" placeholder="Enter your email..." class="join__input">
+                            <button class="join__submit__button" type="submit">Join Us</button>
                         </div>
                     </div>
                     

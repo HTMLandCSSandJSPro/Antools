@@ -65,6 +65,10 @@ address{
     gap: 50px;
 }
 
+.nav__list__item{
+    position: relative;
+}
+
 .nav__list__link{
     font-size: 16px;
     font-weight: 500;
@@ -75,7 +79,41 @@ address{
     position: relative;
 }
 
-.nav__list__link::after{
+.nav__list__link__categories {
+    position: relative;
+}
+
+
+.header__categories {
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    margin-top: 5px;
+    border-radius: 10px;
+    padding: 5px 10px 10px 10px;
+    background-color: #283036;
+    left: -7px;
+    width: 94px;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.nav__list__item__categories:hover>.header__categories {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.header__categories__link {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0em;
+    color: rgba(255, 255, 255, 0.55);
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.nav__list__link::before{
     content: '';
     display: block;
     position: absolute;
@@ -87,12 +125,29 @@ address{
     opacity: 0;
     z-index: 1;
 }
+.nav__list__link_categories::after{
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: url('../img/header-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 2px;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.nav__list__link_categories:hover::after {
+    transform: rotate(-180deg);
+}
 
 .nav__list__link:hover {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.nav__list__link:hover::after {
+.nav__list__link:hover::before {
     width: 100%;
     opacity: 1;
 }
@@ -179,6 +234,17 @@ address{
     padding-left: 55px;
 }
 
+.hero__search__wrap::before{
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url('../img/search.svg');
+    position: absolute;
+    top: 20px;
+    left: 18px;
+}
+
 .hero__search__icon{
     width: 24px; 
     height: 24px;
@@ -217,7 +283,8 @@ address{
 /* TOOLS */
 
 .tools{
-    margin-top: 200px;
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 
 .tools__list{
@@ -294,7 +361,7 @@ address{
     color: #FF6E30;
     padding: 17px 38px;
     border-radius: 8px;
-    margin: 0 auto;
+    margin: 100px auto 0 auto;
     display: block;
 }
 
@@ -377,11 +444,6 @@ address{
 }
 
 /* BRANDS */
-
-.brands{
-    margin-top: 200px;
-}
-
 .trusted__brands{
     position: relative;
     padding: 55px 82px;
@@ -419,6 +481,12 @@ address{
     margin-top: 55px;
 }
 /* TEAM */
+
+.team__wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .team__member__box{
     display: flex;
     column-gap: 57px;
@@ -453,19 +521,6 @@ address{
     top: -50px;
     left: -50px;
 }
-.left__button{
-    position: absolute;
-    left: 0;
-    top: calc(50% - 40px);
-    padding: 38px 34px;
-}
-
-.right__button {
-    position: absolute;
-    right: 0;
-    top: calc(50% - 40px);
-    padding: 38px 34px;
-}
 
 .team__navigation__buttons{
     display: flex;
@@ -491,16 +546,19 @@ address{
 }
 
 /* JOIN */
-.join__wrap{
-    width: 553px;
-    margin: 250px auto 240px auto;
+.join{
+    padding-top: 250px;
+    padding-bottom: 240px;
 }
+
 .join__us__title{
     font-size: 48px;
     font-weight: 500;
     line-height: 1.3;
     letter-spacing: 0em;
     color: #FFFFFFE5;
+    margin: 0 auto;
+    width: 550px;
 }
 
 .join__us__description{
@@ -517,7 +575,8 @@ address{
 .join__input__wrap {
     position: relative;
     display: block;
-    margin-top: 100px;
+    width: 550px;
+    margin: 100px auto 0 auto;
 }
 
 .join__input {
@@ -532,6 +591,7 @@ address{
     letter-spacing: 0em;
     color: #FFFFFF61;
     padding-left: 25px;
+    position: relative;
 }
 
 .join__submit__button {
@@ -548,10 +608,9 @@ address{
     right: 12px;
 }
 
-
-
 .newcomer__tools{
-    margin-top: 200px;
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 
 .newcomer__tools__wrap{
@@ -639,12 +698,12 @@ address{
 /* FOOTER */
 .footer {
     border-top: 1px solid #FFFFFF26;
+    padding: 70px 0 98px 0;
 }
 
 .footer__wrap{
     display: flex;
     column-gap: 156px;
-    padding: 70px 0 98px 0;
 }
 
 .footer__copyright__info{
