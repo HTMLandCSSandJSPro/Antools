@@ -1,34 +1,4 @@
-body{
-    font-family: Poppins;
-    background: #1E252B;
-}
 
-button{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-input{
-    border: none;
-}
-
-ul{
-    list-style: none;
-}
-
-a{
-    text-decoration: none;
-}
-
-address{
-    font-style: normal;
-}
-
-*{
-    margin: 0;
-    padding: 0;
-}
 
 .container{
     width: 1224px;
@@ -165,6 +135,14 @@ address{
     line-height: 1.5;
     letter-spacing: 0em;
     color: rgba(255, 255, 255, 0.78);
+    border-radius: 8px;
+    transition: 0.5s;
+    border: 1px solid transparent;
+}
+
+.account__list__log__in:hover{
+    border: 1px solid #FFFFFF1A;
+    color: #FF6E30;
 }
 
 .account__list__sign__up{
@@ -176,6 +154,13 @@ address{
     letter-spacing: 0em;
     color: white;
     background-color: #FF6E30;
+    border: 1px solid transparent;
+}
+
+.account__list__sign__up:hover {
+    border: 1px solid #FFFFFF1A;
+    color: #FF6E30;
+    background-color: transparent;
 }
 
 .hero{
@@ -649,6 +634,13 @@ address{
     background-color: #FF6E30;
     border-radius: 8px;
     margin-top: 60px;
+    border: 1px solid transparent;
+}
+
+.newcomer__tools__explore__more:hover {
+    border: 1px solid #FFFFFF1A;
+    color: #FF6E30;
+    background-color: transparent;
 }
 
 .newcomer__tools__list{
